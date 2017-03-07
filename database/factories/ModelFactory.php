@@ -18,6 +18,7 @@ $date_time = $faker->date . ' ' . $faker->time;
 
     return [
         'name' => $faker->name,
+        'activated' => true,
 'is_admin' => false,
         'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('password'),
