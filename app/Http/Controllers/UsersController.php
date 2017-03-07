@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Auth;
+
 class UsersController extends Controller
 {
     //
@@ -34,6 +36,7 @@ public function show($id)
         ]);
 
         session()->flash('success', 'Welcome! You have registered successfully!');
+Auth::login($user);
         return redirect()->route('users.show', [$user]);
     }
 
