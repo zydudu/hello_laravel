@@ -14,21 +14,23 @@
         <section class="user_info">
           @include('shared.user_info', ['user' => Auth::user()])
         </section>
+        <section class="stats">
+          @include('shared.stats', ['user' => Auth::user()])
+        </section>
       </aside>
     </div>
   @else
     <div class="jumbotron">
       <h1>Hello Laravel</h1>
-    <p class="lead">
-      This is the home page of Learn Laravel
-    </p>
-    <p>
-      Everything start from here!
-    </p>
-    <p>
-      <!-- 注册 -->
-      <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">Sign up now !</a> 
-    </p>
-  </div>
+      <p class="lead">
+        What you are seeing now is an  <a href="https://laravel-china.org/laravel-tutorial/5.1">Laravel tutorial</a> Home Page。
+      </p>
+      <p>
+        Everything will start from here!
+      </p>
+      <p>
+        <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">Register now</a>
+      </p>
+    </div>    
   @endif
 @stop
